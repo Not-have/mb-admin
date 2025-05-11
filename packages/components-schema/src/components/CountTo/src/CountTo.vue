@@ -1,7 +1,3 @@
-<!-- eslint-disable @typescript-eslint/no-non-null-assertion -->
-<!-- eslint-disable no-implicit-coercion -->
-<!-- eslint-disable no-use-before-define -->
-<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import {
   reactive,
