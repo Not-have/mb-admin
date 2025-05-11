@@ -87,6 +87,7 @@
     "lint-staged": "^15.2.10",
     "npm-run-all2": "^7.0.1",
     "plop": "^4.0.1",
+    "postcss": "8.4.49",
     "postcss-html": "^1.8.0",
     "postcss-less": "^6.0.0",
     "prettier": "^3.5.3",
