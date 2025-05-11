@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 import { reactive, ref, watch, onMounted, unref } from 'vue'
-import { Form, type FormSchema } from '@/components/Form'
+import { Form, type FormSchema } from '@yidatec/components-schema/components/Form'
 import { useI18n } from '@/hooks/web/useI18n'
 import { backtopEmits, ElCheckbox, ElLink } from 'element-plus'
 import { useForm } from '@/hooks/web/useForm'
@@ -14,7 +14,6 @@ import { useValidator } from '@/hooks/web/useValidator'
 import { Icon } from '@/components/Icon'
 import { useUserStore } from '@/stores/user'
 import { BaseButton } from '@/components/Button'
-import { color } from 'echarts'
 
 const { required } = useValidator()
 

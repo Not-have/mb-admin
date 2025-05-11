@@ -12,6 +12,24 @@
   "imports": {
     "#/*": "./src/*"
   },
+  "exports": {
+    "./components/*": {
+      "types": "./src/components/*/index.ts",
+      "default": "./src/components/*/index.ts"
+    },
+    "./hooks/*": {
+      "types": "./src/hooks/*.ts",
+      "default": "./src/hooks/*.ts"
+    },
+    "./utils/*": {
+      "types": "./src/utils/*.ts",
+      "default": "./src/utils/*.ts"
+    },
+    "./types": {
+      "types": "./src/types/index.ts",
+      "default": "./src/types/index.ts"
+    }
+  },
   "devDependencies": {
     "@mt-kit/ts-config": "^1.0.0",
     "element-plus": "^2.9.10",
