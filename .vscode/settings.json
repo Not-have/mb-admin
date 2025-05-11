@@ -8,7 +8,7 @@
     ".env.dev": "$(capture).env.*",
     "README.md": "README*,CHANGELOG*,LICENSE,CNAME",
     "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitignore,.npmrc,.browserslistrc,package-lock.json,plopfile.js,index.html",
-    "eslint.config.js": ".commitlintrc.cjs,.stylelintrc.json,.lintstagedrc,.versionrc,.prettierrc.json",
+    "eslint.config.js": ".commitlintrc.cjs,.stylelintrc.json,.lintstagedrc,.versionrc,.prettierrc.json,.prettier.mjs,.prettierignore",
     "env.d.ts": "auto-imports.d.ts, components.d.ts",
     "vite.config.ts": "vitest.config.ts,uno.config.ts"
   },
