@@ -138,6 +138,7 @@ const dialogStyle = computed(() => {
 
   &__headerbtn {
     top: 0;
+    padding: 0 15px;
   }
 }
 </style>
