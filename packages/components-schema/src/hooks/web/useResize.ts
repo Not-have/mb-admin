@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ref } from "vue";
+import {
+  ref
+} from "vue";
 
 export const useResize = (props?: {
   minHeightPx?: number;
@@ -11,7 +13,7 @@ export const useResize = (props?: {
     minHeightPx = 400,
     minWidthPx = window.innerWidth / 2,
     initHeight = 400,
-    initWidth = window.innerWidth / 2,
+    initWidth = window.innerWidth / 2
   } = props || {};
 
   // 屏幕宽度的 50% 作为最小宽度
@@ -25,6 +27,7 @@ export const useResize = (props?: {
   const minWidth = ref(`${initWidth}px`);
 
   const setupDrag = (elDialog: any, el: any) => {
+
     // 获取对话框元素
     // 是否正在调整大小的标志
     let isResizing = false;
@@ -135,84 +138,84 @@ export const useResize = (props?: {
           // 根据当前调整方向计算新的宽度和高度
           if (currentResizeDirection.includes("right")) {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth + (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth + (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
           }
 
           if (currentResizeDirection.includes("left")) {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth - (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth - (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
           }
 
           if (currentResizeDirection.includes("bottom")) {
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight + (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight + (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
 
           if (currentResizeDirection.includes("top")) {
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight - (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight - (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
 
           if (currentResizeDirection === "top-left") {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth - (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth - (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight - (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight - (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
 
           if (currentResizeDirection === "top-right") {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth + (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth + (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight - (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight - (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
 
           if (currentResizeDirection === "bottom-left") {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth - (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth - (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight + (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight + (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
 
           if (currentResizeDirection === "bottom-right") {
             newWidth = Math.max(
-              minWidthPx,
-              initialWidth + (e.clientX - initialX) * 2,
+                minWidthPx,
+                initialWidth + (e.clientX - initialX) * 2
             );
             minWidth.value = `${newWidth}px`;
             newHeight = Math.max(
-              minHeightPx,
-              initialHeight + (e.clientY - initialY) * 2 - 20,
+                minHeightPx,
+                initialHeight + (e.clientY - initialY) * 2 - 20
             );
             maxHeight.value = `${Math.min(newHeight, window.innerHeight - 165)}px`;
           }
@@ -237,6 +240,6 @@ export const useResize = (props?: {
   return {
     setupDrag,
     maxHeight,
-    minWidth,
+    minWidth
   };
 };
