@@ -15,6 +15,7 @@ dist-ssr
 stats.html
 coverage
 *.local
+.pnpm-store
 
 /cypress/videos/
 /cypress/screenshots/

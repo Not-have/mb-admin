@@ -110,7 +110,7 @@
     "node": ">=18.12.1",
     "npm": ">=8.19.2"
   },
-  "packageManager": "npm@8.19.2",
+  "packageManager": "pnpm@10.8.0",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git"
